@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boeit Mij Nul</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>0</text></svg>'>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>0</text></svg>">
 
   <style>
     body {
@@ -33,7 +33,7 @@
       border-radius: 1.5rem;
       box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
       max-width: 650px;
-      margin: 0 auto 6rem; /* extra ruimte onderaan */
+      margin: 0 auto 4rem; /* extra ruimte onderaan */
     }
 
     h1 {
@@ -66,42 +66,17 @@
       text-decoration: underline;
     }
 
-    /* Tooltip en keurmerk positionering */
     .keurmerk-hoekje {
-      width: 60px;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
-    }
-
-    .keurmerk-wrapper {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-      cursor: pointer;
-    }
-
-    .keurmerk-tooltip {
-      position: absolute;
-      bottom: 70px;
-      right: 0;
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 6px 10px;
-      border-radius: 8px;
-      font-size: 0.7rem;
-      color: #333;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      opacity: 0;
-      pointer-events: none;
+      bottom: 10px;
+      right: 10px;
+      width: 60px;
+      opacity: 0.5;
       transition: opacity 0.3s ease;
-      white-space: nowrap;
+      z-index: 999;
     }
 
-    .keurmerk-wrapper:hover .keurmerk-tooltip {
-      opacity: 1;
-    }
-
-    .keurmerk-wrapper:hover .keurmerk-hoekje {
+    .keurmerk-hoekje:hover {
       opacity: 1;
     }
   </style>
@@ -109,7 +84,7 @@
 <body>
 
   <!-- Banner image -->
-  <img src="boeitmijnul.png" alt="Boeit Mij Nul Banner" class="banner" />
+  <img src="https://github.com/zeespons/boeitmijnul.github.io/raw/main/boeitmijnul.png" alt="Boeit Mij Nul Banner" class="banner" />
 
   <div class="container">
     <h1>🤷‍♂️ Boeit Mij Nul</h1>
@@ -120,11 +95,8 @@
     </p>
   </div>
 
-  <!-- Zeespons keurmerk easter egg met tooltip -->
-  <div class="keurmerk-wrapper">
-    <div class="keurmerk-tooltip">Zeespons Keurmerk™ – Alleen voor oplettende kijkers 👀</div>
-    <img src="zeespons-keurmerk.png" alt="Zeespons Keurmerk" class="keurmerk-hoekje" />
-  </div>
+  <!-- Zeespons keurmerk easter egg -->
+  <img src="https://github.com/zeespons/boeitmijnul.github.io/raw/main/zeespons-keurmerk.png" alt="Zeespons Keurmerk" class="keurmerk-hoekje" />
 
 </body>
 </html>
