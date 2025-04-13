@@ -67,12 +67,17 @@
     }
 
     /* Tooltip en keurmerk positionering */
+    .keurmerk-hoekje {
+      width: 60px;
+      opacity: 0.7;
+      transition: opacity 0.3s ease;
+    }
+
     .keurmerk-wrapper {
       position: fixed;
-      bottom: 10px;
-      right: 10px;
+      bottom: 20px;
+      right: 20px;
       z-index: 999;
-      display: inline-block;
       cursor: pointer;
     }
 
@@ -94,12 +99,6 @@
 
     .keurmerk-wrapper:hover .keurmerk-tooltip {
       opacity: 1;
-    }
-
-    .keurmerk-hoekje {
-      width: 60px;
-      opacity: 0.7;
-      transition: opacity 0.3s ease;
     }
 
     .keurmerk-wrapper:hover .keurmerk-hoekje {
