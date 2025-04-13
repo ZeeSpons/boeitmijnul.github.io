@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Boeit Mij Nul</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>0</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>0</text></svg>'>
 
   <style>
     body {
@@ -33,7 +33,7 @@
       border-radius: 1.5rem;
       box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
       max-width: 650px;
-      margin: 0 auto 4rem; /* extra ruimte onderaan */
+      margin: 0 auto 6rem; /* extra ruimte onderaan */
     }
 
     h1 {
@@ -66,17 +66,40 @@
       text-decoration: underline;
     }
 
-    .keurmerk-hoekje {
+    .keurmerk-wrapper {
       position: fixed;
       bottom: 10px;
       right: 10px;
-      width: 60px;
-      opacity: 0.5;
-      transition: opacity 0.3s ease;
       z-index: 999;
     }
 
-    .keurmerk-hoekje:hover {
+    .keurmerk-tooltip {
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.7rem;
+      color: #333;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .keurmerk-wrapper:hover .keurmerk-tooltip {
+      opacity: 1;
+    }
+
+    .keurmerk-hoekje {
+      width: 60px;
+      opacity: 0.5;
+      transition: opacity 0.3s ease;
+    }
+
+    .keurmerk-wrapper:hover .keurmerk-hoekje {
       opacity: 1;
     }
   </style>
@@ -95,8 +118,11 @@
     </p>
   </div>
 
-  <!-- Zeespons keurmerk easter egg -->
-  <img src="zeespons-keurmerk.png" alt="Zeespons Keurmerk" class="keurmerk-hoekje" />
+  <!-- Zeespons keurmerk easter egg met tooltip -->
+  <div class="keurmerk-wrapper">
+    <div class="keurmerk-tooltip">Zeespons Keurmerk™ – Alleen voor oplettende kijkers 👀</div>
+    <img src="zeespons-keurmerk.png" alt="Zeespons Keurmerk" class="keurmerk-hoekje" />
+  </div>
 
 </body>
 </html>
