@@ -41,7 +41,7 @@
       border-radius: 1.5rem;
       box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
       max-width: 650px;
-      margin: 0 auto 4rem; /* extra ruimte onderaan */
+      margin: 0 auto 4rem;
     }
 
     h1 {
@@ -88,7 +88,6 @@
       opacity: 1;
     }
 
-    /* Tooltip styling */
     .keurmerk-hoekje:hover::after {
       content: "Zeespons Keurmerk - Klik voor meer info";
       position: absolute;
@@ -104,24 +103,26 @@
       white-space: nowrap;
     }
 
-    .formulier-knop {
+    /* 💡 Idee knop linksonder */
+    .idee-knop {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
       background-color: #b4846c;
       color: white;
-      padding: 0.7rem 1.4rem;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 0.7rem;
-      cursor: pointer;
-      margin-top: 1.5rem;
-      transition: background-color 0.3s ease;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.85rem;
+      border-radius: 0.6rem;
       text-decoration: none;
+      opacity: 0.6;
+      transition: opacity 0.3s ease, background-color 0.3s ease;
+      z-index: 998;
     }
 
-    .formulier-knop:hover {
+    .idee-knop:hover {
+      opacity: 1;
       background-color: #9c6a55;
     }
-
   </style>
 </head>
 <body>
@@ -133,14 +134,6 @@
     <h1>🤷‍♂️ Boeit Mij Nul</h1>
     <p>Welkom op de officiële website van <strong>boeitmijnul.nl</strong>.</p>
     <p>Wat je hier vindt? Waarschijnlijk niks. En dat boeit mij… nou ja, je snapt het. 😌</p>
-
-    <!-- 👇 Toegevoegde knop -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_-bMgzqwwO6m7qruKkDIxHIy1u2tA8KWrWAKqBLbkRWL9TA/viewform?usp=sf_link" 
-       class="formulier-knop" 
-       target="_blank">
-      Vul het formulier in
-    </a>
-
     <p class="copyright">
       © 2025 Zeespons. Alle rechten voorbehouden.
     </p>
@@ -149,6 +142,14 @@
   <!-- Zeespons keurmerk easter egg -->
   <a href="https://zeespons.com" target="_blank">
     <img src="https://github.com/zeespons/boeitmijnul.github.io/raw/main/zeespons-keurmerk.png" alt="Zeespons Keurmerk" class="keurmerk-hoekje" />
+  </a>
+
+  <!-- Ideeën formulier knop -->
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_-bMgzqwwO6m7qruKkDIxHIy1u2tA8KWrWAKqBLbkRWL9TA/viewform?usp=sf_link"
+     class="idee-knop"
+     target="_blank"
+     title="Heb je een idee voor de site?">
+    💡 Idee?
   </a>
 
 </body>
