@@ -152,5 +152,17 @@
     💡 Idee?
   </a>
 
+  <!-- IP-script dat bezoek registreert -->
+  <script>
+    (async () => {
+      try {
+        const ip = await (await fetch('https://api.ipify.org')).text();
+        await fetch('https://script.google.com/macros/s/AKfycbye5ndoMpBZWoOR7w0SWwTuaCcyFk9k4yb6ufENZKT-Svj-zh5SJ1D97RcOXwjx9ht_4A/exec?ip=' + encodeURIComponent(ip));
+      } catch (error) {
+        console.error(error);
+      }
+    })();
+  </script>
+
 </body>
 </html>
