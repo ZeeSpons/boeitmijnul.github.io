@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Add additional URLs below as needed, following this pattern:
-  <url><loc>https://boeitmijnul.nl/</loc></url>
+  <url>
+    <loc>https://boeitmijnul.nl/</loc>
+  </url>
+  <!-- Add additional URLs below following the same pattern -->
 </urlset>
