@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://boeitmijnul.nl/sitemap.xml
